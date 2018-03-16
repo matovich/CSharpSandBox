@@ -3,16 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox", "MainSandBox\SandBox.csproj", "{A0952817-7DC5-40E5-BD49-FA08177B4E5D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox.Test", "MainSandBoxTest\SandBox.Test.csproj", "{201970E0-9BDA-4370-8164-91B9678D3AFA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5BA6D36F-08A4-4E82-AAFF-C7846E807B4C}"
 	ProjectSection(SolutionItems) = preProject
 		Local.testsettings = Local.testsettings
 		MainSandBox.vsmdi = MainSandBox.vsmdi
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox", "SandBox\SandBox.csproj", "{A0952817-7DC5-40E5-BD49-FA08177B4E5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox.Test", "SandBox.Test\SandBox.Test.csproj", "{201970E0-9BDA-4370-8164-91B9678D3AFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

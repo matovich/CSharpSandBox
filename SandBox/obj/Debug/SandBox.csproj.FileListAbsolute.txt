@@ -1,0 +1,13 @@
+C:\src\CSharpSandBox\MainSandBox\bin\Debug\SandBox.dll
+C:\src\CSharpSandBox\MainSandBox\bin\Debug\SandBox.pdb
+C:\src\CSharpSandBox\MainSandBox\bin\Debug\SandBox.dll.CodeAnalysisLog.xml
+C:\src\CSharpSandBox\MainSandBox\bin\Debug\SandBox.dll.lastcodeanalysissucceeded
+C:\src\CSharpSandBox\MainSandBox\obj\Debug\SandBox.csprojResolveAssemblyReference.cache
+C:\src\CSharpSandBox\MainSandBox\obj\Debug\SandBox.dll
+C:\src\CSharpSandBox\MainSandBox\obj\Debug\SandBox.pdb
+C:\src\CSharpSandBox\SandBox\bin\Debug\SandBox.dll
+C:\src\CSharpSandBox\SandBox\bin\Debug\SandBox.pdb
+C:\src\CSharpSandBox\SandBox\bin\Debug\SandBox.dll.CodeAnalysisLog.xml
+C:\src\CSharpSandBox\SandBox\bin\Debug\SandBox.dll.lastcodeanalysissucceeded
+C:\src\CSharpSandBox\SandBox\obj\Debug\SandBox.dll
+C:\src\CSharpSandBox\SandBox\obj\Debug\SandBox.pdb
