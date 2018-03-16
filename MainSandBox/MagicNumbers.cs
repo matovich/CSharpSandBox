@@ -1,0 +1,6 @@
+﻿namespace SandBox
+{
+    class MagicNumbers
+    {
+    }
+}

@@ -1,0 +1,9 @@
+C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBoxTest\bin\Debug\MainSandBoxTest.dll
+C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBoxTest\bin\Debug\MainSandBoxTest.pdb
+C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBoxTest\bin\Debug\MainSandBox.dll
+C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBoxTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBoxTest\bin\Debug\Moq.dll
+C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBoxTest\bin\Debug\MainSandBox.pdb
+C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBoxTest\obj\Debug\MainSandBoxTest.csprojResolveAssemblyReference.cache
+C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBoxTest\obj\Debug\MainSandBoxTest.dll
+C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBoxTest\obj\Debug\MainSandBoxTest.pdb

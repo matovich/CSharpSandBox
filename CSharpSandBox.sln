@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox", "MainSandBox\SandBox.csproj", "{A0952817-7DC5-40E5-BD49-FA08177B4E5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox.Test", "MainSandBoxTest\SandBox.Test.csproj", "{201970E0-9BDA-4370-8164-91B9678D3AFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5BA6D36F-08A4-4E82-AAFF-C7846E807B4C}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		MainSandBox.vsmdi = MainSandBox.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0952817-7DC5-40E5-BD49-FA08177B4E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0952817-7DC5-40E5-BD49-FA08177B4E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0952817-7DC5-40E5-BD49-FA08177B4E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0952817-7DC5-40E5-BD49-FA08177B4E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{201970E0-9BDA-4370-8164-91B9678D3AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{201970E0-9BDA-4370-8164-91B9678D3AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{201970E0-9BDA-4370-8164-91B9678D3AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{201970E0-9BDA-4370-8164-91B9678D3AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = MainSandBox.vsmdi
+	EndGlobalSection
+EndGlobal
