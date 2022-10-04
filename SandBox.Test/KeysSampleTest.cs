@@ -8,7 +8,7 @@ namespace SandBox.Test
         [TestMethod]
         public void Constructor()
         {
-            new KeysSample();
+            new KeyboardSample();
         }
     }
 }

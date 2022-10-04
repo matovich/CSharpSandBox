@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace SandBox
 {
-    public class KeysSample
+    public class KeyboardSample
     {
-        public KeysSample()
+        public KeyboardSample()
         {
             string inputString = "F12, Alt, Shift, Control";
 

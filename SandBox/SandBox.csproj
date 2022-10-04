@@ -58,7 +58,7 @@
     <Compile Include="GenericPlay.cs" />
     <Compile Include="ImmutableTimeRange.cs" />
     <Compile Include="IntMath.cs" />
-    <Compile Include="KeysSample.cs" />
+    <Compile Include="KeyboardSample.cs" />
     <Compile Include="LinkedListPlay.cs" />
     <Compile Include="LinqPlay.cs" />
     <Compile Include="loopCheck.cs" />
