@@ -1,7 +1,0 @@
-C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBox\bin\Debug\MainSandBox.dll
-C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBox\bin\Debug\MainSandBox.pdb
-C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBox\bin\Debug\MainSandBox.dll.CodeAnalysisLog.xml
-C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBox\bin\Debug\MainSandBox.dll.lastcodeanalysissucceeded
-C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBox\obj\Debug\MainSandBox.csprojResolveAssemblyReference.cache
-C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBox\obj\Debug\MainSandBox.dll
-C:\Users\Paul.Matovich\Source\Workspaces\Sandbox\MainSandBox\MainSandBox\obj\Debug\MainSandBox.pdb
