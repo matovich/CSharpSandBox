@@ -13,6 +13,8 @@ C:\src\CSharpSandBox\SandBox.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.
 C:\src\CSharpSandBox\SandBox.Test\bin\Debug\Moq.dll
 C:\src\CSharpSandBox\SandBox.Test\bin\Debug\SandBox.dll
 C:\src\CSharpSandBox\SandBox.Test\bin\Debug\SandBox.pdb
-C:\src\CSharpSandBox\SandBox.Test\obj\Debug\SandBox.Test.csprojResolveAssemblyReference.cache
 C:\src\CSharpSandBox\SandBox.Test\obj\Debug\SandBox.Test.dll
 C:\src\CSharpSandBox\SandBox.Test\obj\Debug\SandBox.Test.pdb
+C:\src\CSharpSandBox\SandBox.Test\obj\Debug\SandBox.Test.csproj.AssemblyReference.cache
+C:\src\CSharpSandBox\SandBox.Test\obj\Debug\SandBox.Test.csproj.CoreCompileInputs.cache
+C:\src\CSharpSandBox\SandBox.Test\obj\Debug\SandBox.Test.csproj.CopyComplete
