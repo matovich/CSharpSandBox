@@ -25,7 +25,13 @@ namespace SandBox.Test
         {
             var result = _target.IsEvenHundreds(697);
             Assert.IsTrue(result);
+        }
 
+        [TestMethod]
+        public void IsEvenHundredsReturnsTrueFor5697()
+        {
+            var result = _target.IsEvenHundreds(5697);
+            Assert.IsTrue(result);
         }
 
         [TestMethod]
@@ -33,6 +39,20 @@ namespace SandBox.Test
         {
             var result = _target.IsEvenHundreds(397);
             Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsEvenHundredsReturnsFalseFor2397()
+        {
+            var result = _target.IsEvenHundreds(2397);
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsEvenHundredsReturnsTrueFor97_Because0IsEven()
+        {
+            var result = _target.IsEvenHundreds(97);
+            Assert.IsTrue(result);
         }
     }
 }

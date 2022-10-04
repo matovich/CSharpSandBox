@@ -4,7 +4,7 @@
  <Namespaces>
   <Namespace Name="SandBox">
    <Messages>
-    <Message Id="SandBox" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+    <Message Id="SandBox" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
      <Issue Name="NamespaceShouldBeDiscreteTerm" Certainty="80" Level="Error">The compound word 'SandBox' in namespace name 'SandBox' exists as a discrete term. If your usage is intended to be single word, case it as 'Sandbox'.</Issue>
     </Message>
    </Messages>
@@ -15,13 +15,13 @@
    <Modules>
     <Module Name="sandbox.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'SandBox.dll' with a strong name key.</Issue>
       </Message>
-      <Message Id="SandBox" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+      <Message Id="SandBox" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
        <Issue Name="AssemblyShouldBeDiscreteTerm" Certainty="80" Level="Error">The compound word 'SandBox' in assembly name 'SandBox.dll' exists as a discrete term. If your usage is intended to be single word, case it as 'Sandbox'.</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">Mark 'SandBox.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
       </Message>
      </Messages>
@@ -30,27 +30,27 @@
        <Types>
         <Type Name="CryptoService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
            <Issue Name="CSharp2_0" Certainty="90" Level="Error">Because type 'CryptoService' contains only 'static' members, mark it as 'static' to prevent the compiler from adding a default public constructor.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#DecryptText(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="CryptoService.cs" Line="42">In method 'CryptoService.DecryptText(string)', call System.IDisposable.Dispose on object 'rc2CSP' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="CryptoService.cs" Line="65">Object 'msDecrypt' can be disposed more than once in method 'CryptoService.DecryptText(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 65</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DecryptText2(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="credentials" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+            <Message Id="credentials" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="CryptoService.cs" Line="34">'CryptoService.DecryptText2(string)' declares a variable, 'credentials', of type 'ICredentials', which is never used or is only assigned to. Use this variable or remove it.</Issue>
             </Message>
-            <Message Id="encryptedText" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message Id="encryptedText" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="CryptoService.cs" Line="33">Parameter 'encryptedText' of 'CryptoService.DecryptText2(string)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
@@ -59,20 +59,20 @@
         </Type>
         <Type Name="CustomException" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
            <Issue Certainty="75" Level="Warning">'CustomException' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
           </Message>
-          <Message TypeName="ExceptionsShouldBePublic" Category="Microsoft.Design" CheckId="CA1064" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+          <Message TypeName="ExceptionsShouldBePublic" Category="Microsoft.Design" CheckId="CA1064" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Warning">Make exception class 'CustomException' public.</Issue>
           </Message>
-          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Error">Add [Serializable] to 'CustomException' as this type implements ISerializable.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="ImmutableTimeRange" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
            <Issue Certainty="75" Level="Warning">'ImmutableTimeRange' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
           </Message>
          </Messages>
@@ -81,21 +81,21 @@
          <Members>
           <Member Name="#GetHundreds(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="i" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message Id="i" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\src\CSharpSandBox\SandBox" File="IntMath.cs" Line="6">In method 'IntMath.GetHundreds(int)', consider providing a more meaningful name than parameter name 'i'.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="IntMath.cs" Line="6">The 'this' parameter (or 'Me' in Visual Basic) of 'IntMath.GetHundreds(int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#IsEvenHundreds(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="i" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\src\CSharpSandBox\SandBox" File="IntMath.cs" Line="11">In method 'IntMath.IsEvenHundreds(int)', consider providing a more meaningful name than parameter name 'i'.</Issue>
+            <Message Id="i" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\src\CSharpSandBox\SandBox" File="IntMath.cs" Line="16">In method 'IntMath.IsEvenHundreds(int)', consider providing a more meaningful name than parameter name 'i'.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="IntMath.cs" Line="11">The 'this' parameter (or 'Me' in Visual Basic) of 'IntMath.IsEvenHundreds(int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="IntMath.cs" Line="16">The 'this' parameter (or 'Me' in Visual Basic) of 'IntMath.IsEvenHundreds(int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -105,28 +105,28 @@
          <Members>
           <Member Name="#GetTask()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning">Change 'ITaskMaker.GetTask()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
-        <Type Name="KeysSample" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+        <Type Name="KeyboardSample" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Members>
           <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
-             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\src\CSharpSandBox\SandBox" File="KeysSample.cs" Line="38">'KeysSample.KeysSample()' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\src\CSharpSandBox\SandBox" File="KeyboardSample.cs" Line="38">'KeyboardSample.KeyboardSample()' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
             </Message>
-            <Message TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
-             <Issue Name="ToUpperInvariant" Certainty="90" Level="Error" Path="C:\src\CSharpSandBox\SandBox" File="KeysSample.cs" Line="22">In method 'KeysSample.KeysSample()', replace the call to 'string.ToLowerInvariant()' with String.ToUpperInvariant().</Issue>
+            <Message TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
+             <Issue Name="ToUpperInvariant" Certainty="90" Level="Error" Path="C:\src\CSharpSandBox\SandBox" File="KeyboardSample.cs" Line="22">In method 'KeyboardSample.KeyboardSample()', replace the call to 'string.ToLowerInvariant()' with String.ToUpperInvariant().</Issue>
             </Message>
-            <Message Id="flag" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="KeysSample.cs" Line="43">'KeysSample.KeysSample()' declares a variable, 'flag', of type 'bool', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            <Message Id="flag" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="KeyboardSample.cs" Line="43">'KeyboardSample.KeyboardSample()' declares a variable, 'flag', of type 'bool', which is never used or is only assigned to. Use this variable or remove it.</Issue>
             </Message>
-            <Message Id="keyCode" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="KeysSample.cs" Line="45">'KeysSample.KeysSample()' declares a variable, 'keyCode', of type 'string', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            <Message Id="keyCode" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="KeyboardSample.cs" Line="45">'KeyboardSample.KeyboardSample()' declares a variable, 'keyCode', of type 'string', which is never used or is only assigned to. Use this variable or remove it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -136,7 +136,7 @@
          <Members>
           <Member Name="#TheLinkedList" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Certainty="75" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="LinkedListPlay.cs" Line="14">Change 'LinkedListPlay.TheLinkedList' to be read-only by removing the property setter.</Issue>
             </Message>
            </Messages>
@@ -147,13 +147,13 @@
          <Members>
           <Member Name="#GetLineNumberStrings()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="LinqPlay.cs" Line="25">The 'this' parameter (or 'Me' in Visual Basic) of 'LinqPlay.GetLineNumberStrings()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\src\CSharpSandBox\SandBox" File="LinqPlay.cs" Line="29">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'LinqPlay.GetLineNumberStrings()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="LinqPlay.cs" Line="25">Change 'LinqPlay.GetLineNumberStrings()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
@@ -164,15 +164,15 @@
          <Members>
           <Member Name="#Work()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="loopCheck.cs" Line="74">Method 'LoopCheck.Work()' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "===========================".</Issue>
             </Message>
-            <Message Id="System.Console.WriteLine(System.String,System.Object,System.Object)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message Id="System.Console.WriteLine(System.String,System.Object,System.Object)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="loopCheck.cs" Line="59">Method 'LoopCheck.Work()' passes a literal string as parameter 'format' of a call to 'Console.WriteLine(string, object, object)'. Retrieve the following string(s) from a resource table instead: "Admit {0} r {1}".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="loopCheck.cs" Line="51">Method 'LoopCheck.Work()' passes a literal string as parameter 'format' of a call to 'Console.WriteLine(string, object, object)'. Retrieve the following string(s) from a resource table instead: "Discharge {0} r {1}".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="loopCheck.cs" Line="29">Method 'LoopCheck.Work()' passes a literal string as parameter 'format' of a call to 'Console.WriteLine(string, object, object)'. Retrieve the following string(s) from a resource table instead: "Patient {0} r {1}".</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="loopCheck.cs" Line="8">The 'this' parameter (or 'Me' in Visual Basic) of 'LoopCheck.Work()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
@@ -181,7 +181,7 @@
         </Type>
         <Type Name="MagicNumbers" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
            <Issue Certainty="75" Level="Warning">'MagicNumbers' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
           </Message>
          </Messages>
@@ -190,10 +190,10 @@
          <Members>
           <Member Name="#Process(System.String,System.Func`2&lt;System.String,System.String&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\src\CSharpSandBox\SandBox" File="MyFunction.cs" Line="10">In method 'MyFunction.Process(string, Func&lt;string, string&gt;)', consider providing a more meaningful name than parameter name 's'.</Issue>
             </Message>
-            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="MyFunction.cs" Line="11">In externally visible method 'MyFunction.Process(string, Func&lt;string, string&gt;)', validate parameter 'func' before using it.</Issue>
             </Message>
            </Messages>
@@ -204,19 +204,19 @@
          <Members>
           <Member Name="#LoadBool()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="CriticalError" Path="C:\src\CSharpSandBox\SandBox" File="NullBullPlay.cs" Line="15">Modify 'NullBullPlay.LoadBool()' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
             </Message>
-            <Message Id="bool" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message Id="bool" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Name="LanguageSpecificMember" Certainty="75" Level="Error" Path="C:\src\CSharpSandBox\SandBox" File="NullBullPlay.cs" Line="6">Consider replacing the language-specific data type identifier 'Bool' in member name 'NullBullPlay.LoadBool()' with either a language-independent equivalent or a more generic term, such as 'value'.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="NullBullPlay.cs" Line="6">The 'this' parameter (or 'Me' in Visual Basic) of 'NullBullPlay.LoadBool()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="o" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+            <Message Id="o" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="NullBullPlay.cs" Line="8">'NullBullPlay.LoadBool()' declares a variable, 'o', of type 'object', which is never used or is only assigned to. Use this variable or remove it.</Issue>
             </Message>
-            <Message Id="testObject" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+            <Message Id="testObject" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="NullBullPlay.cs" Line="7">'NullBullPlay.LoadBool()' declares a variable, 'testObject', of type 'MyFunction', which is never used or is only assigned to. Use this variable or remove it.</Issue>
             </Message>
            </Messages>
@@ -225,17 +225,17 @@
         </Type>
         <Type Name="Params" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Params" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+          <Message Id="Params" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Params' in type name 'Params'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#Concatenate(System.Int32,System.String[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="Params.cs" Line="9">The 'this' parameter (or 'Me' in Visual Basic) of 'Params.Concatenate(int, params string[])' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="Params.cs" Line="12">In externally visible method 'Params.Concatenate(int, params string[])', validate parameter 'args' before using it.</Issue>
             </Message>
            </Messages>
@@ -246,33 +246,33 @@
          <Members>
           <Member Name="#Encode(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="string" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message Id="string" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Name="LanguageIndependentMemberParameter" Certainty="75" Level="Error" Path="C:\src\CSharpSandBox\SandBox" File="PasswordEncoding.cs" Line="16">In member 'PasswordEncoding.Encode(string)', consider replacing the data type identifier 'string' in parameter name 'stringToEncode' with a more generic term, such as 'value'.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="PasswordEncoding.cs" Line="16">The 'this' parameter (or 'Me' in Visual Basic) of 'PasswordEncoding.Encode(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EncodePw(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Pw" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message Id="Pw" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="C:\src\CSharpSandBox\SandBox" File="PasswordEncoding.cs" Line="9">Correct the casing of 'Pw' in member name 'PasswordEncoding.EncodePw(string, string)' by changing it to 'PW'.</Issue>
             </Message>
-            <Message Id="Pw" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message Id="Pw" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\src\CSharpSandBox\SandBox" File="PasswordEncoding.cs" Line="9">Correct the spelling of 'Pw' in member name 'PasswordEncoding.EncodePw(string, string)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
              <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\src\CSharpSandBox\SandBox" File="PasswordEncoding.cs" Line="10">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'PasswordEncoding.EncodePw(string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#UnEncode(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Un" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message Id="Un" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error" Path="C:\src\CSharpSandBox\SandBox" File="PasswordEncoding.cs" Line="22">Correct the casing of 'Un' in member name 'PasswordEncoding.UnEncode(string)' by changing it to 'UN'.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="PasswordEncoding.cs" Line="22">The 'this' parameter (or 'Me' in Visual Basic) of 'PasswordEncoding.UnEncode(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
@@ -283,20 +283,20 @@
          <Members>
           <Member Name="#GetId(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="assy" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message Id="assy" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\src\CSharpSandBox\SandBox" File="RunningAssemblyFinder.cs" Line="15">In method 'RunningAssemblyFinder.GetId(string)', correct the spelling of 'assy' in parameter name 'assyName' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="RunningAssemblyFinder.cs" Line="15">The 'this' parameter (or 'Me' in Visual Basic) of 'RunningAssemblyFinder.GetId(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#IsRunning(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="assy" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message Id="assy" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\src\CSharpSandBox\SandBox" File="RunningAssemblyFinder.cs" Line="9">In method 'RunningAssemblyFinder.IsRunning(string)', correct the spelling of 'assy' in parameter name 'assyName' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="RunningAssemblyFinder.cs" Line="9">The 'this' parameter (or 'Me' in Visual Basic) of 'RunningAssemblyFinder.IsRunning(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
@@ -305,21 +305,21 @@
         </Type>
         <Type Name="SecureStringPlay" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
            <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'SecureStringPlay' because it creates members of the following IDisposable types: 'SecureString'. If 'SecureStringPlay' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#GetCharacterArray()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="SecureStringPlay.cs" Line="40">Change 'SecureStringPlay.GetCharacterArray()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetPassword(System.Security.SecureString)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="SecureStringPlay.cs" Line="26">The 'this' parameter (or 'Me' in Visual Basic) of 'SecureStringPlay.GetPassword(SecureString)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
@@ -328,7 +328,7 @@
         </Type>
         <Type Name="TimeRange" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
            <Issue Certainty="75" Level="Warning">'TimeRange' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
           </Message>
          </Messages>
@@ -337,10 +337,10 @@
          <Members>
           <Member Name="#Get5000Milliseconds()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="DependsOnFix">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="DependsOnFix">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="TimeSpanPlay.cs" Line="8">The 'this' parameter (or 'Me' in Visual Basic) of 'TimeSpanPlay.Get5000Milliseconds()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="TimeSpanPlay.cs" Line="8">Change 'TimeSpanPlay.Get5000Milliseconds()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
@@ -349,14 +349,14 @@
         </Type>
         <Type Name="UseGeneric" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
            <Issue Certainty="75" Level="Warning">'UseGeneric' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#Play()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="NonBreaking">
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="NonBreaking">
              <Issue Certainty="95" Level="Warning" Path="C:\src\CSharpSandBox\SandBox" File="UseGeneric.cs" Line="6">The 'this' parameter (or 'Me' in Visual Basic) of 'UseGeneric.Play()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
@@ -367,7 +367,7 @@
          <Members>
           <Member Name="#GetThing()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-10-04 21:12:30Z" FixCategory="Breaking">
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2022-10-04 21:34:04Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="Warning">Change 'YieldClass.GetThing()' to a property if appropriate.</Issue>
             </Message>
            </Messages>
