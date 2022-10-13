@@ -1,4 +1,6 @@
 ﻿using System;
+using SandBox;
+using SandBoxCore;
 
 namespace ConsoleRunner
 {
@@ -6,7 +8,7 @@ namespace ConsoleRunner
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            new InterviewQuestionOne().Run();
         }
     }
 }
