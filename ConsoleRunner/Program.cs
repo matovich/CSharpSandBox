@@ -1,6 +1,7 @@
 ﻿using System;
 using SandBox;
 using SandBoxCore;
+using SandBoxCore.DesignPatterns.StructuralPatterns;
 
 namespace ConsoleRunner
 {
@@ -8,7 +9,7 @@ namespace ConsoleRunner
     {
         static void Main(string[] args)
         {
-            new InterviewQuestionOne().Run();
+            new CompositePattern().Run();
         }
     }
 }
