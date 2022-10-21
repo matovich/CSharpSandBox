@@ -1,6 +1,6 @@
 ﻿namespace SandBox
 {
-    public class NullBullPlay
+    public class NullBoolPlay
     {
         public bool LoadBool()
         {

@@ -2,6 +2,7 @@
 using SandBox;
 using SandBoxCore;
 using SandBoxCore.DesignPatterns.StructuralPatterns;
+using SandBoxCore.InterviewQuestions;
 
 namespace ConsoleRunner
 {
@@ -9,7 +10,7 @@ namespace ConsoleRunner
     {
         static void Main(string[] args)
         {
-            new CompositePattern().Run();
+            new Staircase().Run();
         }
     }
 }

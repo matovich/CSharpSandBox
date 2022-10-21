@@ -1,12 +1,12 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace SandBox.Test
 {
-    [TestClass]
+    [TestFixture]
     public class YieldTest
     {
-        [TestMethod]
+        [Test]
         public void YieldTestMethod()
         {
             var target = new YieldClass();
@@ -14,7 +14,7 @@ namespace SandBox.Test
             Assert.AreEqual(10, target.GetThing().Count());
         }
 
-        [TestMethod]
+        [Test]
         public void TestName()
         {
         }

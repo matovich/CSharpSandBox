@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace SandBox.Test
 {
-    [TestClass]
+    [TestFixture]
     public class TimeSpanPlayTest
     {
         private readonly Func<TimeSpanPlay> _targetMaker = () => new TimeSpanPlay();
 
-        [TestMethod]
+        [Test]
         public void GetFiveSeconds_returns_5000_milliseconds()
         {
             TimeSpanPlay target = _targetMaker();

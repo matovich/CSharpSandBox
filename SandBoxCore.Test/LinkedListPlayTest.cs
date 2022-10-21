@@ -1,19 +1,19 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 
 namespace SandBox.Test
 {
-    [TestClass]
+    [TestFixture]
     public class LinkedListPlayTest
     {
-        [TestMethod]
+        [Test]
         public void CreatesLinkedList()
         {
             LinkedListPlay target = TargetMaker();
 
-            Assert.IsNotNull(target.TheLinkedList);
+            Assert.NotNull(target.TheLinkedList);
         }
 
-        [TestMethod]
+        [Test]
         public void HoldsFiveElements()
         {
             LinkedListPlay target = TargetMaker();
@@ -29,7 +29,7 @@ namespace SandBox.Test
             }
         }
 
-        [TestMethod]
+        [Test]
         public void InsertMissingElementsWhileInForLoop()
         {
             LinkedListPlay target = TargetMaker();
@@ -39,7 +39,7 @@ namespace SandBox.Test
             Assert.AreEqual(10, target.TheLinkedList.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void InsertSequentialMissingElementsWhileInForeLoop()
         {
             LinkedListPlay target = TargetMaker();

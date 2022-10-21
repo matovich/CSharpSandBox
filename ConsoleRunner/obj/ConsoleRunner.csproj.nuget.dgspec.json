@@ -34,9 +34,6 @@
             "projectReferences": {
               "C:\\src\\CSharpSandBox\\SandBoxCore\\SandBoxCore.csproj": {
                 "projectPath": "C:\\src\\CSharpSandBox\\SandBoxCore\\SandBoxCore.csproj"
-              },
-              "C:\\src\\CSharpSandBox\\SandBox\\SandBox.csproj": {
-                "projectPath": "C:\\src\\CSharpSandBox\\SandBox\\SandBox.csproj"
               }
             }
           }
@@ -145,21 +142,6 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
-      }
-    },
-    "C:\\src\\CSharpSandBox\\SandBox\\SandBox.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\src\\CSharpSandBox\\SandBox\\SandBox.csproj",
-        "projectName": "SandBox",
-        "projectPath": "C:\\src\\CSharpSandBox\\SandBox\\SandBox.csproj",
-        "frameworks": {
-          "net45": {
-            "projectReferences": {}
-          }
-        }
-      },
-      "frameworks": {
-        "net45": {}
       }
     }
   }

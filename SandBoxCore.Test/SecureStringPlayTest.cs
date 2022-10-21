@@ -1,44 +1,44 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Security;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace SandBox.Test
 {
-    [TestClass]
+    [TestFixture]
     public class SecureStringPlayTest
     {
         private readonly SecureStringPlay _target = new SecureStringPlay();
 
-        [TestMethod]
+        [Test]
         public void GetPassword()
         {
             string result = _target.GetPassword();
             Assert.AreEqual("password0", result);
         }
 
-        [TestMethod]
+        [Test]
         public void GetPasswordCharacterArray()
         {
             IEnumerable<char> result = _target.GetCharacterArray();
             Assert.AreEqual(10, result.Count());
         }
 
-        [TestMethod]
+        [Test]
         public void GetPasswordHandlesEmptySecureString()
         {
             string result = _target.GetPassword(new SecureString());
             Assert.AreEqual(string.Empty, result);
         }
 
-        [TestMethod]
+        [Test]
         public void GetCharacterArray()
         {
             IEnumerable<char> result = _target.GetCharacterArray();
             Assert.AreEqual(10, result.Count());
         }
 
-        [TestMethod]
+        [Test]
         public void GetCharacterArrayWithCorrectCharacters()
         {
             IEnumerable<char> result = _target.GetCharacterArray();

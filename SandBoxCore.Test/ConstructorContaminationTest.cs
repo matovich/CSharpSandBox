@@ -1,8 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 
 namespace SandBox.Test
 {
-    [TestClass]
+    [TestFixture]
     public class ConstructorContaminationTest
     {
         private readonly ConstructorContamination _target;
@@ -12,7 +12,7 @@ namespace SandBox.Test
             _target = new ConstructorContamination();
         }
 
-        [TestMethod]
+        [Test]
         public void OnlyAIsSetTrue()
         {
             _target.PropA = true;
@@ -21,7 +21,7 @@ namespace SandBox.Test
             Assert.IsFalse(_target.PropB);
         }
 
-        [TestMethod]
+        [Test]
         public void OnlyBIsSetTrue()
         {
             _target.PropB = true;

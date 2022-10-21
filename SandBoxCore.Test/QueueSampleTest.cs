@@ -2,14 +2,14 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace SandBox.Test
 {
-    [TestClass]
+    [TestFixture]
     public class QueueSampleTest
     {
-        [TestMethod]
+        [Test]
         public void CheckQueueIndexLocations()
         {
             var queue = new Queue<int>();
@@ -27,7 +27,7 @@ namespace SandBox.Test
             Assert.AreEqual(3, queue.ElementAt(1));
         }
 
-        [TestMethod]
+        [Test]
         public void CheckStackIndexLocations()
         {
             var stack = new Stack<int>();

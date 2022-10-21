@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+﻿using NUnit.Framework;
 namespace SandBox.Test
 {
-    [TestClass]
+    [TestFixture]
     public class ParamsTest
     {
-        [TestMethod]
+        [Test]
         public void Concatenate_joins_strings()
         {
             var target = new Params();

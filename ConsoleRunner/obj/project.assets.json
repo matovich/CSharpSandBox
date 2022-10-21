@@ -391,15 +391,6 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "SandBox/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/SandBox.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SandBox.dll": {}
-        }
-      },
       "SandBoxCore/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1266,11 +1257,6 @@
         "version.txt"
       ]
     },
-    "SandBox/1.0.0": {
-      "type": "project",
-      "path": "../SandBox/SandBox.csproj",
-      "msbuildProject": "../SandBox/SandBox.csproj"
-    },
     "SandBoxCore/1.0.0": {
       "type": "project",
       "path": "../SandBoxCore/SandBoxCore.csproj",
@@ -1279,7 +1265,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "SandBox >= 1.0.0",
       "SandBoxCore >= 1.0.0"
     ]
   },
@@ -1317,9 +1302,6 @@
           "projectReferences": {
             "C:\\src\\CSharpSandBox\\SandBoxCore\\SandBoxCore.csproj": {
               "projectPath": "C:\\src\\CSharpSandBox\\SandBoxCore\\SandBoxCore.csproj"
-            },
-            "C:\\src\\CSharpSandBox\\SandBox\\SandBox.csproj": {
-              "projectPath": "C:\\src\\CSharpSandBox\\SandBox\\SandBox.csproj"
             }
           }
         }

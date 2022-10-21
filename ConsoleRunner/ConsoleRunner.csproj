@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SandBoxCore\SandBoxCore.csproj" />
-    <ProjectReference Include="..\SandBox\SandBox.csproj" />
   </ItemGroup>
 
 </Project>

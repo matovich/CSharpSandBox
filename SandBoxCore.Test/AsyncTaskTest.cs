@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using Assert = NUnit.Framework.Assert;
 
 namespace SandBox.Test
 {

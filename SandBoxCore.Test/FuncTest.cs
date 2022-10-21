@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 
 namespace SandBox.Test
 {
-    [TestClass]
+    [TestFixture]
     public class FuncTest
     {
-        [TestMethod]
+        [Test]
         public void Function_Test_for_methods_that_takes_a_Func_parameter()
         {
             var myFunc = new MyFunction();

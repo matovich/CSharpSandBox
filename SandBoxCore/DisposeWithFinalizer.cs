@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace SandBoxCore
 {
+    /// <summary>
+    /// From https://www.youtube.com/watch?v=e0G5X3bu6hY
+    /// </summary>
     public class DisposeWithFinalizer : IDisposable
     {
         private bool disposed;

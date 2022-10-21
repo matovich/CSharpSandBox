@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace SandBox.Test
 {
-    [TestClass]
+    [TestFixture]
     public class LinqPlayTest
     {
         private readonly Func<LinqPlay> _targetMaker = () => new LinqPlay();
 
-        [TestMethod]
+        [Test]
         public void Gets_a_list_of_numbers_as_strings()
         {
             LinqPlay target = _targetMaker();
@@ -24,7 +24,7 @@ namespace SandBox.Test
             result.ToList().ForEach(s => Trace.WriteLine(s));
         }
 
-        [TestMethod]
+        [Test]
         public void TimeUsingSkip()
         {
             var target = _targetMaker();
@@ -38,7 +38,7 @@ namespace SandBox.Test
             Console.WriteLine("Skip Time {0}", timer.ElapsedTicks);
         }
 
-        [TestMethod]
+        [Test]
         public void TimeUsingIndexer()
         {
             var target = _targetMaker();
@@ -54,7 +54,7 @@ namespace SandBox.Test
 
 
 
-        [TestMethod]
+        [Test]
         public void TimeUsingArray()
         {
             var target = _targetMaker();
@@ -68,7 +68,7 @@ namespace SandBox.Test
             Console.WriteLine("Array Time {0}", timer.ElapsedTicks);
         }
         
-        [TestMethod]
+        [Test]
         public void TimeUsingImprovedArray()
         {
             var target = _targetMaker();
@@ -82,7 +82,7 @@ namespace SandBox.Test
             Console.WriteLine("Improved Array Time {0}", timer.ElapsedTicks);
         }
 
-        [TestMethod]
+        [Test]
         public void TimeUsingImprovedArrayWithToListGuard()
         {
             var target = _targetMaker();
@@ -96,7 +96,7 @@ namespace SandBox.Test
             Console.WriteLine("Improved Array with to list guard Time {0}", timer.ElapsedTicks);
         }
 
-        [TestMethod]
+        [Test]
         public void TimeUsingElementAt()
         {
             var target = _targetMaker();
