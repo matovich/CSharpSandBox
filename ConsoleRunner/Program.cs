@@ -10,7 +10,7 @@ namespace ConsoleRunner
     {
         static void Main(string[] args)
         {
-            new Staircase().Run();
+            new BigO().Run();
         }
     }
 }
