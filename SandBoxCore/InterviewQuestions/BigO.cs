@@ -18,7 +18,8 @@ namespace SandBoxCore.InterviewQuestions
         {
             ConstantTime();
             LinearTime();
-
+            QuadraticTime();
+            ExponentialTime();
             FactorialTime();
         }
 
@@ -54,7 +55,6 @@ namespace SandBoxCore.InterviewQuestions
         /// </summary>
         public void LinearTime()
         {
-
             Console.WriteLine($"{Environment.NewLine}LinerTime");
             var array1 = new List<int> { 0, 1, 2, 3, 4 };
             bool hasMatch(List<int> array, int num)
@@ -86,27 +86,32 @@ namespace SandBoxCore.InterviewQuestions
         /// <returns></returns>
         public void QuadraticTime()
         {
-            //            const array1 = [0, 4, 1, 2, 5]
-            //            const array2 = [3, 4, 2, 7]
-            //            const array3 = [7, 6, 8, 3]
-            //            function containsDuplicate(array1, array2)
-            //            {
-            //                for (let i = 0; i < array1.length; i++)
-            //                {
-            //                    for (let j = 0; j < array2.length; j++)
-            //                    {
-            //                        if (array1[i] === arrray2[j])
-            //                        {
-            //                            return true
-            //                        }
-            //                    }
-            //                }
-            //                return false
-            //}
-            //            console.log('Contains Duplicate?: ', containsDuplicate(array1, array2))
-            //            //=> Contains Duplicate?: true
-            //            console.log('Contains Duplicate?: ', containsDuplicate(array1, array3))
-            //            //=> Contains Duplicate?: false   
+            Console.WriteLine($"{Environment.NewLine}QuadraticTime");
+            var array1 = new List<int> { 0, 4, 1, 2, 5 };
+            var array2 = new List<int> { 3, 4, 2, 7 };
+            var array3 = new List<int> { 7, 6, 8, 3 };
+            bool containsDuplicate(List<int> array1, List<int> array2)
+            {
+                return RunInStopwatch<List<int>, List<int>, bool>((array1, array2) =>
+                {
+                    for (var i = 0; i < array1.Count; i++)
+                    {
+                        for (var j = 0; j < array2.Count; j++)
+                        {
+                            if (array1[i] == array2[j])
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                }, array1, array2);
+            };
+
+            //=> Contains Duplicate?: true
+            Console.WriteLine($"Contains Duplicate?: {containsDuplicate(array1, array2)}");
+            //=> Contains Duplicate?: false   
+            Console.WriteLine($"Contains Duplicate?: {containsDuplicate(array1, array3)}");
         }
 
         /// <summary>
@@ -116,23 +121,28 @@ namespace SandBoxCore.InterviewQuestions
         /// </summary>
         public void ExponentialTime()
         {
-            //function fibonacci(num)
-            //{
-            //    if (num <= 1)
-            //    {
-            //        return num
-            //    }
-            //    else
-            //    {
-            //        return fibonacci(num - 2) + fibonacci(num - 1)
-            // }
-            //}
-            //console.log('Fibonacci: ', fibonacci(4))
+            Console.WriteLine($"{Environment.NewLine}ExponentialTime");
+            int fibonacci(int num)
+            {
+                return RunInStopwatch<int, int>((int num) =>
+                {
+                    if (num <= 1)
+                    {
+                        return num;
+                    }
+                    else
+                    {
+                        return fibonacci(num - 2) + fibonacci(num - 1);
+                    }
+                }, num);
+            };
+
             ////=> Fibonacci: 3
-            //console.log('Fibonacci: ', fibonacci(10))
+            Console.WriteLine($"Fibonacci: {fibonacci(4)}");
             ////=> Fibonacci: 55
-            //console.log('Fibonacci: ', fibonacci(20))
+            Console.WriteLine($"Fibonacci: {fibonacci(10)}");
             ////=> Fibonacci: 6765
+            Console.WriteLine($"Fibonacci: {fibonacci(20)}");
         }
 
         /// <summary>
@@ -170,6 +180,15 @@ namespace SandBoxCore.InterviewQuestions
             var r = a.Invoke();
             sw.Stop();
             Console.WriteLine($"Runtime in ms was: {sw.ElapsedTicks}");
+            return r;
+        }
+
+        private U RunInStopwatch<T, U>(Func<T, U> a, T t)
+        {
+            var sw = Stopwatch.StartNew();
+            var r = a.Invoke(t);
+            sw.Stop();
+            Console.WriteLine($"Runtime was {sw.ElapsedTicks} ticks.");
             return r;
         }
 
