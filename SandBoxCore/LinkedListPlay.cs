@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace SandBox
+namespace SandBoxCore
 {
     public class LinkedListPlay
 

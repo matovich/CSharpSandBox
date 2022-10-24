@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
+using SandBoxCore;
 
-namespace SandBox.Test
+namespace SandBoxCore.Test
 {
     [TestFixture]
     public class ConstructorContaminationTest

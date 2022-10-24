@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using NUnit.Framework;
 
-namespace SandBox.Test
+namespace SandBoxCore.Test
 {
     [TestFixture]
     public class LinqPlayTest

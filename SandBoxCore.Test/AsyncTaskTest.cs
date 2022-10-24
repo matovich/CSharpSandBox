@@ -1,22 +1,18 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Moq;
-using Assert = NUnit.Framework.Assert;
 
-namespace SandBox.Test
+namespace SandBoxCore.Test
 {
-    [TestClass]
+    [TestFixture]
     public class AsyncTaskTest
     {
-        [TestMethod]
+        [Test]
         public void AddAsyncWithMaker()
         {
             var taskSource = new TaskCompletionSource<int>();
             taskSource.SetResult(8);
 
-            var taskMakerMock = new Mock<ITaskMaker>();
+            var taskMakerMock = new Mock<ITaskMaker<int>>();
             taskMakerMock.Setup(x => x.GetTask()).Returns(taskSource.Task);
 
             var target = new AsyncTask(taskMakerMock.Object) {Value = 4};
@@ -24,24 +20,24 @@ namespace SandBox.Test
             target.AddAsyncWithMaker();
             taskSource.Task.Wait(5000);
 
-            Assert.AreEqual(8, target.Value);
+            Assert.That(target.Value, Is.EqualTo(8));
         }
 
-        [TestMethod]
+        [Test]
         public void AddAsyncWithMakerSecondProcess()
         {
             var task = new Task<int>(() => 5);
 
-            var target = new AsyncTask(new TaskMaker(task));
+            var target = new AsyncTask(new TaskMaker<int>(task));
             target.AddAsyncWithMaker();
 
             task.Wait(5000);
 
-            Assert.AreEqual(5, target.Value);
+            Assert.That(target.Value, Is.EqualTo(5));
         }
 
         // This is the best example so far.
-        [TestMethod]
+        [Test]
         public void AddAsyncSecondAttempt()
         {
             var target = new AsyncTask {Value = 3};
@@ -50,10 +46,10 @@ namespace SandBox.Test
 
             Thread.Sleep(2000);
 
-            Assert.AreEqual(7, target.Value);
+            Assert.That(target.Value, Is.EqualTo(7));
         }
 
-        [TestMethod]
+        [Test]
         public void AddAsyncTest()
         {
             var scheduler = new TestableScheduler();
@@ -65,7 +61,7 @@ namespace SandBox.Test
 
             Thread.Sleep(2000);
 
-            Assert.AreEqual(8, target.Value);
+            Assert.That(target.Value, Is.EqualTo(8));
         }
     }
 

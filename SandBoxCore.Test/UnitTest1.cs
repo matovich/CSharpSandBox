@@ -1,3 +1,5 @@
+using NUnit.Framework;
+
 namespace SandBoxCore.Test
 {
     public class Tests

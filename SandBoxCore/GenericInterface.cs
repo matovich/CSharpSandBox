@@ -1,4 +1,4 @@
-﻿namespace SandBox
+﻿namespace SandBoxCore
 {
     internal interface IGenericInterface
     {

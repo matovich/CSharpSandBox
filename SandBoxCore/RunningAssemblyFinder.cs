@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Linq;
 
-namespace SandBox
+namespace SandBoxCore
 {
     public class RunningAssemblyFinder
     {

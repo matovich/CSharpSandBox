@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace SandBox
+namespace SandBoxCore
 {
     class TimeRange
     {

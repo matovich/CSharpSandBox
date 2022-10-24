@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace SandBox
+namespace SandBoxCore
 {
     public class SecureStringPlay
     {

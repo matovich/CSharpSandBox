@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace SandBox
+namespace SandBoxCore
 {
     internal class CustomException : Exception
     {

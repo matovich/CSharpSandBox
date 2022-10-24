@@ -1,6 +1,6 @@
-﻿// Paul Matovich  2014
+﻿
 
-namespace SandBox
+namespace SandBoxCore
 {
     public class QueueSample
     {

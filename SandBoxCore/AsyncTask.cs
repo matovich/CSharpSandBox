@@ -1,18 +1,18 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace SandBox
+namespace SandBoxCore
 {
     public class AsyncTask
     {
-        private readonly ITaskMaker _maker;
+        private readonly ITaskMaker<int> _maker;
         private readonly TaskFactory _taskFactory;
 
         public AsyncTask()
         {
         }
 
-        public AsyncTask(ITaskMaker maker)
+        public AsyncTask(ITaskMaker<int> maker)
         {
             _maker = maker;
         }
@@ -49,35 +49,23 @@ namespace SandBox
             Task<int> task = _taskFactory.StartNew(() => Value += value);
             task.ContinueWith(t => Value = t.Result);
         }
-
-        //private void ContinuePopulateUnitPatientsTask( Task<Tuple<Int32, IEnumerable<IPatient>>> patientsTask )
-        //{
-        //    var uiTaskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
-
-        //    patientsTask.ContinueWith( t => HandleFaultedPatientLoadTask( t.Exception ), CancellationToken.None, TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously, uiTaskScheduler )
-        //        .ContinueWith( task => _logger.Debug( () => String.Format( CultureInfo.InvariantCulture, "Exception encountered while attempting to handle fault during populating all patients. {0}", task.Exception.InnerException.Message ) ), TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously );
-
-        //    patientsTask.ContinueWith( t => HandlePatientLoadingTask( t.Result.Item1, t.Result.Item2 ), CancellationToken.None, TaskContinuationOptions.NotOnFaulted | TaskContinuationOptions.ExecuteSynchronously, uiTaskScheduler )
-        //        .ContinueWith( erroredTask => HandleFaultedPatientLoadTask( erroredTask.Exception ), CancellationToken.None, TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously, uiTaskScheduler )
-        //        .ContinueWith( task => _logger.Debug( () => String.Format( CultureInfo.InvariantCulture, "Exception encountered while attempting to handle fault during populating all patients. {0}", task.Exception.InnerException.Message ) ), TaskContinuationOptions.OnlyOnFaulted | TaskContinuationOptions.ExecuteSynchronously );
-        //}
     }
 
-    public interface ITaskMaker
+    public interface ITaskMaker<T>
     {
-        Task<int> GetTask();
+        Task<T> GetTask();
     }
 
-    public class TaskMaker : ITaskMaker
+    public class TaskMaker<T> : ITaskMaker<T>
     {
-        private readonly Task<int> _task;
+        private readonly Task<T> _task;
 
-        public TaskMaker(Task<int> task)
+        public TaskMaker(Task<T> task)
         {
             _task = task;
         }
 
-        public virtual Task<int> GetTask()
+        public virtual Task<T> GetTask()
         {
             _task.RunSynchronously();
             //_Task.Start();

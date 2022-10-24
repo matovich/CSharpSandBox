@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using NUnit.Framework;
 
-namespace SandBox.Test
+namespace SandBoxCore.Test
 {
     [TestFixture]
     public class RunningAssemblyFinderTest

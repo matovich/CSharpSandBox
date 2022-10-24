@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SandBox
+namespace SandBoxCore
 {
     public class MyFunction
     {

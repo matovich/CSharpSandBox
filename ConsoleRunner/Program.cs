@@ -1,8 +1,4 @@
-﻿using System;
-using SandBox;
-using SandBoxCore;
-using SandBoxCore.DesignPatterns.StructuralPatterns;
-using SandBoxCore.InterviewQuestions;
+﻿using SandBoxCore.InterviewQuestions;
 
 namespace ConsoleRunner
 {

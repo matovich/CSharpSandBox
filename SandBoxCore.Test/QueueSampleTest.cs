@@ -1,10 +1,10 @@
-﻿// Paul Matovich  2014
+﻿
 
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 
-namespace SandBox.Test
+namespace SandBoxCore.Test
 {
     [TestFixture]
     public class QueueSampleTest

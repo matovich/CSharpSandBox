@@ -3,7 +3,7 @@ using System.Linq;
 using System.Security;
 using NUnit.Framework;
 
-namespace SandBox.Test
+namespace SandBoxCore.Test
 {
     [TestFixture]
     public class SecureStringPlayTest

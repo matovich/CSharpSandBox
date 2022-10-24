@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SandBox.Test
+namespace SandBoxCore.Test
 {
     [TestClass]
     public class MagicNumbersTest

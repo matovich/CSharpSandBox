@@ -2,7 +2,7 @@
 using System.Text;
 using System.Windows.Forms;
 
-namespace SandBox
+namespace SandBoxCore
 {
     public class KeyboardSample
     {
