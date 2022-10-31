@@ -11,8 +11,7 @@ namespace SandBoxCore
     {
         public async void Run()
         {
-            new TestableProductionTaskClass().Run();
-
+            await new TestableProductionTaskClass().Run();
 
             var t1 = new Task(() => Console.WriteLine("Test Task"));
             t1.Start();
@@ -26,8 +25,14 @@ namespace SandBoxCore
             var t3 = Task.Run(() => Console.WriteLine("Test Task.Run"));
             Console.WriteLine("Task.Run Done...");
 
-            await CancelTokenTask();
+            await t2;
+            t2.Dispose();
+            await t3;
+            t3.Dispose();
+            await t1;
+            t1.Dispose();
 
+            await CancelTokenTask();
         }
 
         private static async Task CancelTokenTask()
@@ -54,6 +59,7 @@ namespace SandBoxCore
             finally
             {
                 cancellationTokenSource.Dispose();
+                t4.Dispose();
             }
         }
 
@@ -70,11 +76,13 @@ namespace SandBoxCore
 
     public class ProductionTaskClass
     {
-        public void Run()
+        public async Task Run()
         {
             var t1 = new Task(() => Console.WriteLine("Production Task Class"));
             StartTask(t1);
             Console.WriteLine($"Done...{Environment.NewLine}");
+            await t1;
+            t1.Dispose();
         }
 
         protected virtual void StartTask(Task task)
