@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace SandBoxCore
+﻿namespace SandBoxCore
 {
     public class LinqPlay
     {
         private List<byte> _source = new List<byte>();
-        private int _total = 10000000;
+        private readonly int _total = 10000000;
         private int _valueToSkip = 9000000;
 
 

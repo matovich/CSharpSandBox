@@ -1,4 +1,6 @@
-﻿using SandBoxCore.InterviewQuestions;
+﻿using System;
+using SandBoxCore;
+using SandBoxCore.InterviewQuestions;
 
 namespace ConsoleRunner
 {
@@ -6,7 +8,9 @@ namespace ConsoleRunner
     {
         static void Main(string[] args)
         {
-            new BigO().Run();
+            new TaskStart().Run();
+
+            Console.ReadLine();
         }
     }
 }

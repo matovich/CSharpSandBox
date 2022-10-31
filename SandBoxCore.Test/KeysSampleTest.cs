@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 
 namespace SandBoxCore.Test
 {
-    [TestClass]
+    [TestFixture]
     public class KeysSampleTest
     {
-        [TestMethod]
+        [Test]
         public void Constructor()
         {
             new KeyboardSample();

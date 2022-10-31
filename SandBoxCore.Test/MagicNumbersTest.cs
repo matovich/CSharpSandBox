@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 
 namespace SandBoxCore.Test
 {
-    [TestClass]
+    [TestFixture]
     public class MagicNumbersTest
     {
-        [TestMethod]
+        [Test]
         public void GetlowestmultiplierOf35and31()
         {
             

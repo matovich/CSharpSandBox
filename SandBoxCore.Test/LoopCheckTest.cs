@@ -1,14 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 
 namespace SandBoxCore.Test
 {
-    [TestClass]
+    [TestFixture]
     public class LoopCheckTest
     {
 
 
 
-        [TestMethod]
+        [Test]
         public void Given_When_Then()
         {
             var target = new LoopCheck();
