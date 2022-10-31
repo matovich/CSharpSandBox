@@ -81,6 +81,11 @@ namespace SandBoxCore
         {
             task.Start();
         }
+
+        protected virtual void StartTask<T>(Task<T> task)
+        {
+            task.Start();
+        }
     }
 
     public class TestableProductionTaskClass : ProductionTaskClass
