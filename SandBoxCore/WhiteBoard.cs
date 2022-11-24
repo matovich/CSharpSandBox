@@ -9,76 +9,53 @@ namespace SandBoxCore
     {
         public void Run()
         {
-            // 28, 8, 96, 2     NO
-            // 
-            // 0, 3, 4, 2  YES
+            int[] input = { 1, 3, 4, 1, 6 };
 
-            // 43, 2, 70, 2   NO
 
-            Console.WriteLine($"{kangaroo(43, 2, 70, 2)}");
+            var result = solution(input);
+
+            if(result != 2)
+            {
+                throw new Exception("Sorry");
+            }
+
+            Console.WriteLine(result);
         }
 
-        private void DoSomething()
+
+        public int solution(int[] A)
         {
+            for (int i = 1; i < int.MaxValue; i++)
+            {
+                if (!A.Contains(i))
+                    return i;
+            }
 
+            return 1;
+
+
+
+            //var sorted = new List<int>(A).OrderBy(x => x).ToList();
+
+            //var startIndex = sorted.FindIndex(x => x == 1);
+
+            //var v1 = 0;
+
+            //for (int i = startIndex; i < A.Length - startIndex; i++)
+            //{
+            //    if (sorted[1] == v1 + 1) { v1 = sorted[i]; }
+            //    else
+            //    {
+            //        return v1;
+            //    }
+
+            //}
+
+
+            //return 1;
 
         }
 
-        public static string kangaroo(int x1, int v1, int x2, int v2)
-        { 
-            if(v1 == v2 && x1 != x2)
-            {
-                return "NO";
-            }
-
-            if (x1 < x2 && v1 < v2)
-            {
-                return "NO";
-            }
-
-            if (x1 > x2 && v1 < v2)
-            {
-                var p1 = x1 + v1;
-                var p2 = x2 + v2;
-
-                do
-                {
-                    if (p1 == p2)
-                    {
-                        return "YES";
-                    }
-                    p1 = p1 + v1;
-                    p2 = p2 + v2;
-                } while (p1 >= p2);
-
-                return "NO";
-            }
-
-            if (x1 < x2 && v1 > v2)
-            {
-                var p1 = x1 + v1;
-                var p2 = x2 + v2;
-
-                do
-                {
-                    if (p1 == p2)
-                    {
-                        return "YES";
-                    }
-                    p1 = p1 + v1;
-                    p2 = p2 + v2;
-                } while (p1 <= p2);
-
-                return "NO";
-            }
-
-            if (x1 > x2 && v1 > v2)
-            {
-                return "NO";
-            }
-
-            return "YES";
-        }
 
     }
 }

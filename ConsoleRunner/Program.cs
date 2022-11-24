@@ -8,7 +8,7 @@ namespace ConsoleRunner
     {
         static void Main(string[] args)
         {
-            new TaskStart().Run();
+            new WhiteBoard().Run();
 
             Console.ReadLine();
         }
