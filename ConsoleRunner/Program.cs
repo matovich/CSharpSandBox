@@ -9,6 +9,7 @@ namespace ConsoleRunner
         static void Main(string[] args)
         {
             new RxNet().Run();
+            Console.WriteLine("Observable Started");
 
             Console.ReadLine();
         }
