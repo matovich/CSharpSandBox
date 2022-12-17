@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/5Z6kFf1bLg8LsqTHoEkqFozq5To0B1aYHDElNAdJaVi497o6zg8f1gGcKiqlUl7Gb2r645qdiOpgzMdI1AqWQ==",
+  "dgSpecHash": "f80teDMsseUPdq0OWvaZ4aX/TJe5M8To1YW4ToU08KxccZLckb+/2vkHul/AWnXHJIG5SRTEXxfICz2kah4OGA==",
   "success": true,
   "projectFilePath": "C:\\src\\CSharpSandBox\\ConsoleRunner\\ConsoleRunner.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,13 @@
     "C:\\Users\\matov\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\matov\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\matov\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\matov\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\matov\\.nuget\\packages\\system.reactive.compatibility\\5.0.0\\system.reactive.compatibility.5.0.0.nupkg.sha512",
+    "C:\\Users\\matov\\.nuget\\packages\\system.reactive.core\\5.0.0\\system.reactive.core.5.0.0.nupkg.sha512",
+    "C:\\Users\\matov\\.nuget\\packages\\system.reactive.interfaces\\5.0.0\\system.reactive.interfaces.5.0.0.nupkg.sha512",
+    "C:\\Users\\matov\\.nuget\\packages\\system.reactive.linq\\5.0.0\\system.reactive.linq.5.0.0.nupkg.sha512",
+    "C:\\Users\\matov\\.nuget\\packages\\system.reactive.platformservices\\5.0.0\\system.reactive.platformservices.5.0.0.nupkg.sha512",
+    "C:\\Users\\matov\\.nuget\\packages\\system.reactive.providers\\5.0.0\\system.reactive.providers.5.0.0.nupkg.sha512",
     "C:\\Users\\matov\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\matov\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "C:\\Users\\matov\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",

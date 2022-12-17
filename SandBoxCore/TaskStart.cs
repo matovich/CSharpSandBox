@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,17 +14,17 @@ namespace SandBoxCore
         {
             await new TestableProductionTaskClass().Run();
 
-            var t1 = new Task(() => Console.WriteLine("Test Task"));
+            var t1 = new Task(() => Console.WriteLine("Test Task.Start"));
             t1.Start();
-            Console.WriteLine("Done...");
+            Console.WriteLine("   Test.Start - Started...");
             Console.WriteLine();
 
             var t2 = Task.Factory.StartNew(() => Console.WriteLine("Test TaskFactory"));
-            Console.WriteLine("Task.Factory Done...");
+            Console.WriteLine("   Task.Factory Started...");
             Console.WriteLine();
 
             var t3 = Task.Run(() => Console.WriteLine("Test Task.Run"));
-            Console.WriteLine("Task.Run Done...");
+            Console.WriteLine("   Task.Run Started...");
 
             await t2;
             t2.Dispose();
@@ -35,6 +36,24 @@ namespace SandBoxCore
             await CancelTokenTask();
         }
 
+        private void Play()
+        {
+            var q = new ConcurrentQueue<string>();
+            q.Enqueue("Hello");
+            if(q.TryDequeue(out var item))
+            {
+                Console.WriteLine(item);
+            }
+
+            var l = new ConcurrentBag<string>();
+            l.Add("Hello");
+            if(l.TryTake(out var item2))
+            {
+                Console.WriteLine(item2);
+            }
+
+        }
+
         private static async Task CancelTokenTask()
         {
             var cancellationTokenSource = new CancellationTokenSource();
@@ -44,7 +63,7 @@ namespace SandBoxCore
                 NeverEnding(ct);
             }, ct);
 
-            Thread.Sleep(50);
+            Thread.Sleep(10);
             cancellationTokenSource.Cancel();
             try
             {
@@ -54,7 +73,6 @@ namespace SandBoxCore
             catch (OperationCanceledException)
             {
                 Console.WriteLine($"{Environment.NewLine}Canceled");
-
             }
             finally
             {
@@ -69,6 +87,11 @@ namespace SandBoxCore
             while (true)
             {
                 ct.ThrowIfCancellationRequested();
+                // or
+                //if(ct.IsCancellationRequested )
+                //{
+                //    break;
+                //}
                 Console.Write("t "); 
             }
         }
@@ -80,7 +103,7 @@ namespace SandBoxCore
         {
             var t1 = new Task(() => Console.WriteLine("Production Task Class"));
             StartTask(t1);
-            Console.WriteLine($"Done...{Environment.NewLine}");
+            Console.WriteLine($"   Production Task Class - Done...{Environment.NewLine}");
             await t1;
             t1.Dispose();
         }

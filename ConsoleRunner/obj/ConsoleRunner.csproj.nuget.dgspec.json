@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -122,6 +122,26 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.24.0, )"
+            },
+            "System.Reactive.Compatibility": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Reactive.Core": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Reactive.Interfaces": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Reactive.Linq": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Reactive.PlatformServices": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -140,7 +160,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

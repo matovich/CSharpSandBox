@@ -9,7 +9,7 @@ namespace SandBoxCore
         {
             Console.WriteLine("");
 
-            byte[] _byteKey = new byte[] { 171, 66, 187, 13, 38, 81, 245, 157, 93, 9, 213, 15, 42, 70, 86, 233, 51, 50, 66, 77, 24, 88, 81, 99, 123, 219, 187, 217, 136, 76, 73, 186, 167, 61, 26, 169, 84, 149, 223, 103, 65, 183, 26, 218, 98, 92, 9, 127, 136, 235, 254, 53, 4, 2, 212, 242, 180, 75, 246, 187, 37, 225, 19, 30 };
+            byte[] _byteKey = new byte[] { 171, 66, 187, 13, 38, 81, 245, 157, 93, 9, 213, 15, 42, 71, 86, 233, 51, 50, 66, 77, 24, 88, 81, 99, 123, 219, 187, 217, 136, 76, 73, 186, 167, 61, 26, 169, 84, 149, 223, 103, 65, 183, 26, 218, 98, 92, 9, 127, 136, 235, 254, 53, 4, 2, 212, 242, 180, 75, 246, 187, 37, 225, 19, 30 };
 
             Console.WriteLine("Base64 encoded key:");
             Console.WriteLine(Convert.ToBase64String(_byteKey));
@@ -34,8 +34,8 @@ namespace SandBoxCore
             //Some PayLoad that contain information about the  customer
             var payload = new JwtPayload
             {
-                ["some "] = "hello ",
-                ["scope"] = "http://dummy.com/",
+                ["some"] = "hello world",
+                ["scope"] = "OpenId, Admin",
                 ["exp"] = DateTimeOffset.UtcNow.ToUnixTimeSeconds() + 3600,
                 ["iss"] = "https://rooms.docusign.com"
             };
@@ -44,7 +44,7 @@ namespace SandBoxCore
             var secToken = new JwtSecurityToken(header, payload);
             var handler = new JwtSecurityTokenHandler();
 
-            Console.WriteLine($"Payload time:  {secToken.Payload["exp"]}");
+            Console.WriteLine($"JWT expire time: {DateTimeOffset.FromUnixTimeSeconds((long)secToken.Payload["exp"]).LocalDateTime}");
 
             // Token to String so you can use it in your client
             var tokenString = handler.WriteToken(secToken);
