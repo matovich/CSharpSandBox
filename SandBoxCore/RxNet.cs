@@ -24,53 +24,50 @@ namespace SandBoxCore
 
         public void Run()
         {
-            Console.WriteLine("Thread ID: " +  Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Main Thread ID: " +  Thread.CurrentThread.ManagedThreadId);
             var observable1 = ObervableFactory("One");
             var observable2 = ObervableFactory("Two");
 
-            //System.Reactive.Concurrency.TaskPoolScheduler
-
-
-            subscription1 = observable1.Throttle(TimeSpan.FromMilliseconds(1)).ObserveOn(ThreadPoolScheduler.Instance).Subscribe(OnNext, OnError, OnCompleted);
+            subscription1 = observable1.ObserveOn(ThreadPoolScheduler.Instance).Subscribe(OnNext, e => OnError(e, 1), () => OnCompleted(1)); //.Throttle(TimeSpan.FromMilliseconds(0)).ObserveOn(ThreadPoolScheduler.Instance)
             Console.WriteLine("Subscription One Running");
-            subscription2 = observable2.Throttle(TimeSpan.FromMilliseconds(1)).ObserveOn(ThreadPoolScheduler.Instance).Subscribe(OnNext2, OnError2, OnCompleted2);
+            subscription2 = observable2.ObserveOn(ThreadPoolScheduler.Instance).Subscribe(OnNext, e => OnError(e, 2), () => OnCompleted(2));
             Console.WriteLine("Subscription Two Running");
         }
 
-        private void OnCompleted()
+        private void OnCompleted(int runId)
         {
-            Console.WriteLine("All done.");
-            subscription1?.Dispose();
+            Console.WriteLine($"{runId} is done.");
+            if(runId == 1)
+            {
+                subscription1?.Dispose();
+            }
+            else
+            {
+                subscription2?.Dispose();
+            }
         }
 
-        private void OnError(Exception ex)
+        private void OnError(Exception ex, int runId)
         {
-            subscription1?.Dispose();
+            if (runId == 1)
+            {
+                subscription1?.Dispose();
+            }
+            else
+            {
+                subscription2?.Dispose();
+            }
             throw new Exception("Things did not go well.", ex);
         }
 
         private void OnNext(string value)
         {
-            Console.WriteLine($"{value}    Thread Id: {Thread.CurrentThread.ManagedThreadId}");
+            Console.WriteLine($"Thread Id: {Thread.CurrentThread.ManagedThreadId} - {value}");
         }
 
-        private void OnError2(Exception ex)
-        {
-            subscription2?.Dispose();
-            throw new Exception("Things did not go well.", ex);
-        }
-
-        private void OnNext2(string value)
-        {
-            Console.WriteLine($"{value}    Thread Id: {Thread.CurrentThread.ManagedThreadId}");
-        }
-
-        private void OnCompleted2()
-        {
-            Console.WriteLine("All done.");
-            subscription2?.Dispose();
-        }
-
+        /// <summary>
+        /// Code copied from https://riptutorial.com/system-reactive
+        /// </summary>
         private IObservable<string> ObervableFactory(string identifier)
         {
             return Observable.Create<string>(o =>
@@ -84,13 +81,6 @@ namespace SandBoxCore
 
                     // notify that the search text has been changed
                     o.OnNext(builder.ToString());
-
-                    // pause between each character to simulate actual typing
-                    Thread.Sleep(125);
-
-                    // spent some time to think about the next word to type
-                    if (c == ' ')
-                        Thread.Sleep(1000);
                 }
 
                 o.OnCompleted();
