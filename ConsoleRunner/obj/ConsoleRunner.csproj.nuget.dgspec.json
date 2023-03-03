@@ -103,6 +103,10 @@
               "target": "Package",
               "version": "[1.7.0, )"
             },
+            "LanguageExt.Core": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[6.24.0, )"

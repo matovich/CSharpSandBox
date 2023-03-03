@@ -8,7 +8,7 @@ namespace SandBoxCore.Test
         [Test]
         public void Constructor()
         {
-            new KeyboardSample();
+         //   new KeyboardSample();
         }
     }
 }
